@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monopad - Amusement Park</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="monopad-container">
+        <div id="static-overlay" class="noise-overlay"></div>
+
+        <header>
+            <div class="clock" id="clock">00:00:00</div>
+            <div class="status">SYSTEM ONLINE - AMUSEMENT PARK MODE</div>
+        </header>
+
+        <main>
+            <nav class="sidebar">
+                <div class="icon-wrapper" title="Personagens" ondblclick="showTab('personagens')">
+                    <img src="icones/personagens.png" class="monopad-icon" alt="Personagens">
+                    <span class="icon-label">PERSONAGENS</span>
+                </div>
+
+                <div class="icon-wrapper" title="Truth Bullets" ondblclick="showTab('bullets')">
+                    <img src="icones/bullets.png" class="monopad-icon" alt="Bullets">
+                    <span class="icon-label">TRUTH BULLETS</span>
+                </div>
+
+                <div class="icon-wrapper" title="Eventos" ondblclick="showTab('eventos')">
+                    <img src="icones/eventos.png" class="monopad-icon" alt="Eventos">
+                    <span class="icon-label">EVENTOS</span>
+                </div>
+            </nav>
+
+            <section class="content" id="display-area">
+                <div class="welcome-screen">
+                    <h2>BEM-VINDO AO MONOPAD</h2>
+                    <p>Dê um clique duplo em um ícone para acessar.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
