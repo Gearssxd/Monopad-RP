@@ -1,11 +1,17 @@
-// Áudios
-const bgMusic = new Audio('audios/background.mp3');
+// Configuração dos Áudios com os nomes exatos dos seus arquivos
+// Se você colocou na pasta 'audios', mantenha o 'audios/'. Se estiver solto, remova.
+const bgMusic = new Audio('música fundo.mp3'); 
 bgMusic.loop = true;
-const clickSound = new Audio('audios/click.mp3');
+bgMusic.volume = 0.5;
 
-document.addEventListener('click', () => {
-    bgMusic.play().catch(() => {});
-}, { once: true });
+const clickSound = new Audio('clique.mp3');
+clickSound.volume = 0.7;
+
+// Função para tocar o som de clique (chamada no clique duplo)
+function playClick() {
+    clickSound.currentTime = 0;
+    clickSound.play();
+}
 
 // Dados do seu Jogo
 const data = {
